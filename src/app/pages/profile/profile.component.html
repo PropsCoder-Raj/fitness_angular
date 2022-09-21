@@ -1,50 +1,171 @@
-<div class="container pt-5">
+<div class="px-5 py-5">
     <div class="d-flex flex-column text-center mb-5">
         <h4 class="display-4 font-weight-bold">Profile</h4>
     </div>
-    <div class="row">   
-        <div class="offset-md-3 col-md-6 pb-5">
-            <div class="contact-form">
-                <div id="success"></div>
-                <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                    <div class="control-group mb-3">
-                        <label>Your Name</label>
-                        <input type="text" class="form-control" id="yourname" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" value="Rohit Pandit">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p style="font-size: 22px;font-weight: bold;">Edit Profile</p>
+                    <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div id="success"></div>
+                                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                                            <div class="control-group mb-3">
+                                                <label>Your Name</label>
+                                                <input type="text" class="form-control" id="yourname"
+                                                    placeholder="Your Name" required="required"
+                                                    data-validation-required-message="Please enter your name"
+                                                    value="Rohit Pandit">
+                                            </div>
+                                            <div class="control-group mb-3">
+                                                <label>Store Name</label>
+                                                <input type="text" class="form-control" id="storename"
+                                                    placeholder="Store Name" required="required"
+                                                    data-validation-required-message="Please enter store name"
+                                                    value="SK">
+                                            </div>
+                                            <div class="control-group mb-3">
+                                                <label>Location</label>
+                                                <select id="location" class="form-control">
+                                                    <option value="USA">USA</option>
+                                                    <option value="Dubai">Dubai</option>
+                                                    <option value="India">India</option>
+                                                </select>
+                                            </div>
+                                            <div class="control-group mb-3">
+                                                <label>Currency</label>
+                                                <select id="currency" class="form-control">
+                                                    <option value="Dollar">Dollar</option>
+                                                    <option value="AED">AED</option>
+                                                    <option value="INR">INR</option>
+                                                </select>
+                                            </div>
+                                            <div class="control-group mb-3">
+                                                <label>Email</label>
+                                                <input type="email" class="form-control" id="email" placeholder="Email"
+                                                    required="required"
+                                                    data-validation-required-message="Please enter amail"
+                                                    value="rohit@gmail.com">
+                                            </div>
+                                            <div class="control-group mb-3">
+                                                <label>Phone</label>
+                                                <input type="number" class="form-control" id="phone" placeholder="Phone"
+                                                    required="required"
+                                                    data-validation-required-message="Please enter phone"
+                                                    value="07038415053">
+                                            </div>
+                                            <div class="control-group">
+                                                <label>Address</label>
+                                                <input type="text" class="form-control" id="address"
+                                                    placeholder="Address" required="required"
+                                                    data-validation-required-message="Please enter address"
+                                                    value="Moshi, Pune 412 105">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="control-group mb-3">
-                        <label>Store Name</label>
-                        <input type="text" class="form-control" id="storename" placeholder="Store Name" required="required" data-validation-required-message="Please enter store name" value="SK">
-                    </div>
-                    <div class="control-group mb-3">
-                        <label>Location</label>
-                        <select id="location" class="form-control">
-                            <option value="USA">USA</option>
-                            <option value="Dubai">Dubai</option>
-                            <option value="India">India</option>
-                        </select>
-                    </div>
-                    <div class="control-group mb-3">
-                        <label>Currency</label>
-                        <select id="currency" class="form-control">
-                            <option value="Dollar">Dollar</option>
-                            <option value="AED">AED</option>
-                            <option value="INR">INR</option>
-                        </select>
-                    </div>
-                    <div class="control-group mb-3">
-                        <label>Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Email" required="required" data-validation-required-message="Please enter amail" value="rohit@gmail.com">
-                    </div>
-                    <div class="control-group mb-3">
-                        <label>Phone</label>
-                        <input type="number" class="form-control" id="phone" placeholder="Phone" required="required" data-validation-required-message="Please enter phone" value="07038415053">
-                    </div>
-                    <div class="control-group mb-3">
-                        <label>Address</label>
-                        <input type="text" class="form-control" id="address" placeholder="Address" required="required" data-validation-required-message="Please enter address" value="Moshi, Pune 412 105">
-                    </div>
-                </form>
+                </div>
             </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <p style="font-size: 22px;font-weight: bold;">Change Password</p>
+                    <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div id="success"></div>
+                                        <form name="sentMessage" id="changePassword" novalidate="novalidate">
+                                            <div class="control-group mb-3">
+                                                <label>Current Password</label>
+                                                <input type="password" class="form-control" id="currentpassword"
+                                                    placeholder="Current Password" required="required"
+                                                    data-validation-required-message="Please enter current password" value="Rohit@5053">
+                                            </div>
+                                            <div class="control-group mb-3">
+                                                <label>New Password</label>
+                                                <input type="password" class="form-control" id="newpassword"
+                                                    placeholder="New Password" required="required"
+                                                    data-validation-required-message="Please enter new password" value="Rohit@5053">
+                                            </div>
+                                            <div class="control-group mb-3">
+                                                <label>Confirm Password</label>
+                                                <input type="password" class="form-control" id="confirmpassword"
+                                                    placeholder="Confirm Password" required="required"
+                                                    data-validation-required-message="Please enter confirm password" value="Rohit@5053">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <p style="font-size: 22px;font-weight: bold;">Notification</p>
+                    <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="list-group">
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                          <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Order Confirmation</div>
+                                            You will be notified when customer order any product
+                                          </div>
+                                          <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="check3" checked>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                          <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Order Status Changed</div>
+                                            You will be notified when customer make changes to the order
+                                          </div>
+                                          <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="check3" checked>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                          <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Order Delivered</div>
+                                            You will be notified once the order delivered
+                                          </div>
+                                          <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="check3" checked>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                          <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Email Notification</div>
+                                            You will be notified to get updates through email
+                                          </div>
+                                          <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="check3" checked>
+                                          </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 text-end py-5">
+            <button type="button" class="btn btn-primary px-5" style="background: #1b8a43 !important;border: solid 1px #1b8a43 !important;">Save</button>
         </div>
     </div>
 </div>
