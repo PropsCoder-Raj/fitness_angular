@@ -1,12 +1,12 @@
 export const environment = {
   production: true,
   firebaseConfig : {
-    apiKey: "AIzaSyDZ4l-WGMT1Q3ZcbFqL6PqhvkMPhKSHt_w",
-    authDomain: "fitness-5b6ae.firebaseapp.com",
-    projectId: "fitness-5b6ae",
-    storageBucket: "fitness-5b6ae.appspot.com",
-    messagingSenderId: "248272287803",
-    appId: "1:248272287803:web:0337e70d8e3157ea2c841e",
-    measurementId: "G-E4ZVE4X970"
+    apiKey: "AIzaSyDhwxJzAQeTtBA7bj2TF_6A1b0JK0Fb6uo",
+    authDomain: "zonefit-95744.firebaseapp.com",
+    projectId: "zonefit-95744",
+    storageBucket: "zonefit-95744.appspot.com",
+    messagingSenderId: "211925552714",
+    appId: "1:211925552714:web:960fa52a0525dc4bfae0b3",
+    measurementId: "G-Z1SFZMGP1F"
   }
 };

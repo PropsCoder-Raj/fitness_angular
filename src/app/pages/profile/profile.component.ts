@@ -11,7 +11,7 @@ export class ProfileComponent implements OnInit {
   constructor(public title: Title) { }
 
   ngOnInit(): void {
-    this.title.setTitle("Fitness | Profile");
+    this.title.setTitle("Zone Fitness | Profile");
   }
 
 }

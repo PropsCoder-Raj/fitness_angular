@@ -11,7 +11,7 @@ export class MySessionComponent implements OnInit {
   constructor(public title: Title) { }
 
   ngOnInit(): void {
-    this.title.setTitle("Fitness | My Session");
+    this.title.setTitle("Zone Fitness | My Session");
   }
 
 }

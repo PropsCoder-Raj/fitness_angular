@@ -11,7 +11,7 @@ export class MyPaymentHistoryComponent implements OnInit {
   constructor(public title: Title) { }
 
   ngOnInit(): void {
-    this.title.setTitle("Fitness | My Payment History");
+    this.title.setTitle("Zone Fitness | My Payment History");
   }
 
 }

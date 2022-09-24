@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { environment } from 'src/environments/environment';
+import { getFirestore } from "firebase/firestore";
 
 @Component({
   selector: 'app-root',
@@ -17,5 +18,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void{
     const app = initializeApp(environment.firebaseConfig);
     const analytics = getAnalytics(app);
+    const db = getFirestore(app);
   }
 }
