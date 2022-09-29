@@ -7,10 +7,10 @@ import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
-  { path: "home", component: HomeComponent },
-  { path: "my-session", component: MySessionComponent },
-  { path: "my-payment-history", component: MyPaymentHistoryComponent },
-  { path: "profile", component: ProfileComponent },
+  // { path: "home", component: HomeComponent },
+  // { path: "my-session", component: MySessionComponent },
+  // { path: "my-payment-history", component: MyPaymentHistoryComponent },
+  // { path: "profile", component: ProfileComponent },
 ];
 
 @NgModule({

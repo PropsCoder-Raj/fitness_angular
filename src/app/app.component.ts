@@ -4,6 +4,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { environment } from 'src/environments/environment';
 import { getFirestore } from "firebase/firestore";
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ import { getFirestore } from "firebase/firestore";
 export class AppComponent implements OnInit {
   title = 'fitness_angular';
 
-  constructor(public router: Router){ }
+  constructor(public router: Router, public authS: AuthService){ }
 
   ngOnInit(): void{
     const app = initializeApp(environment.firebaseConfig);
