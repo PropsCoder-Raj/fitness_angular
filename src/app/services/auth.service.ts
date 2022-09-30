@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
+  public authStatus : boolean = false;
+
   constructor(
     public afAuth: AngularFireAuth, // Inject Firebase auth service,
     public router: Router // Inject angular router
@@ -17,9 +19,9 @@ export class AuthService {
   IsLogin(){
     this.afAuth.authState.subscribe((user) => {
       if(user){
-        console.log("User Login");
+        this.authStatus = true;
       }else{
-        console.log("User Logout");
+        this.authStatus = false;
       }
     });
   }
