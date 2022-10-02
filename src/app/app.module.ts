@@ -15,6 +15,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { LoginComponent } from './pages/login/login.component';
 import { SpinnersAngularModule } from 'spinners-angular';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,14 @@ import { SpinnersAngularModule } from 'spinners-angular';
     LoginComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     CommonModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     SpinnersAngularModule,
-    AuthGuardModule
+    AuthGuardModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

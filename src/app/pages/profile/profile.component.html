@@ -19,7 +19,7 @@
                                                 <input type="text" class="form-control" id="yourname"
                                                     placeholder="Your Name" required="required"
                                                     data-validation-required-message="Please enter your name"
-                                                    value="Rohit Pandit">
+                                                    [(ngModel)]="fullName" [ngModelOptions]="{standalone: true}">
                                             </div>
                                             <div class="control-group mb-3">
                                                 <label>Store Name</label>
@@ -49,7 +49,7 @@
                                                 <input type="email" class="form-control" id="email" placeholder="Email"
                                                     required="required"
                                                     data-validation-required-message="Please enter amail"
-                                                    value="rohit@gmail.com">
+                                                    value="{{useremail}}">
                                             </div>
                                             <div class="control-group mb-3">
                                                 <label>Phone</label>

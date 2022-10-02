@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Title } from '@angular/platform-browser';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-my-session',
@@ -11,11 +12,15 @@ export class MySessionComponent implements OnInit {
 
   public sessionArray: any = [];
 
-  constructor(public title: Title, public afs: AngularFirestore) { }
+  constructor(public title: Title, public afs: AngularFirestore, public dataS: DataService) { }
 
   ngOnInit(): void {
     this.title.setTitle("Zone Fitness | My Session");
-    this.getSession();
+    if(this.dataS.sessionList.length == 0){
+      this.getSession();
+    }else{
+      this.sessionArray = this.dataS.sessionList;
+    }
   }
 
   getSession(){
@@ -35,6 +40,7 @@ export class MySessionComponent implements OnInit {
           })
           setTimeout(() => {
             this.sessionArray.push({ ...data, name: name });
+            this.dataS.sessionList = this.sessionArray;
             console.log("sessionArray : ", this.sessionArray);
           }, 2000);
         });

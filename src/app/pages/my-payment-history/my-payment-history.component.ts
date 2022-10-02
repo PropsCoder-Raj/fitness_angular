@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Title } from '@angular/platform-browser';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-my-payment-history',
@@ -11,11 +12,15 @@ export class MyPaymentHistoryComponent implements OnInit {
 
   public paymentsArray: any = [];
 
-  constructor(public title: Title, public afs: AngularFirestore) { }
+  constructor(public title: Title, public afs: AngularFirestore, public dataS : DataService) { }
 
   ngOnInit(): void {
     this.title.setTitle("Zone Fitness | My Payment History");
-    this.getPayments();
+    if(this.dataS.paymentList.length == 0){
+      this.getPayments();
+    }else{
+      this.paymentsArray = this.dataS.paymentList;
+    }
   }
 
   getPayments(){
@@ -25,6 +30,7 @@ export class MyPaymentHistoryComponent implements OnInit {
         session.docs.map((doc) => {
           var data : any = doc.data()
           this.paymentsArray.push(data);
+          this.dataS.paymentList = this.paymentsArray;
         });
       })
   }
