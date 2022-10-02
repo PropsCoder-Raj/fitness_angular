@@ -52,13 +52,13 @@ export class AuthService{
               workout_days: 134
             }).then((res: any) => {
                 localStorage.setItem("uid", result.user?.uid);
-                window.location.replace("/home")
+                window.location.replace("/")
             }).catch((error) =>{
               console.log("Error :", error);
             });
           }else{
             localStorage.setItem("uid", result.user?.uid);
-            window.location.replace("/home")
+            window.location.replace("/")
           }
         })
       })
@@ -71,7 +71,7 @@ export class AuthService{
   SignOut(){
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem("uid");
-      window.location.replace("/login");
+      window.location.replace("/");
     });
   }
 
