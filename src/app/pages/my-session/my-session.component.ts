@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Title } from '@angular/platform-browser';
-import { async } from '@firebase/util';
 
 @Component({
   selector: 'app-my-session',
@@ -38,24 +37,7 @@ export class MySessionComponent implements OnInit {
             this.sessionArray.push({ ...data, name: name });
             console.log("sessionArray : ", this.sessionArray);
           }, 2000);
-        })
-        // session.forEach((element: any) => {
-        //   var name = "";
-          
-          // this.afs.collection("session").doc(element.docId).collection("partners").get().forEach((ele) => {
-          //   console.log("ele: ", ele.docChanges())
-          // })
-          // // .valueChanges()
-          // // .subscribe((partners) => {
-          // //   partners.forEach((elementParner : any) => {
-          // //     name = name + " " + elementParner.name;
-          // //     console.log("name : ", name);
-          // //   })
-          // // });
-        //   // setTimeout(() => {
-        //   //   console.log("1 name : ", name);
-        //   // }, 2000);
-        // })
+        });
       })
   }
 

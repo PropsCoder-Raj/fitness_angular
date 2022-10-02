@@ -13,18 +13,15 @@
                                 <th>Payment</th>
                             </tr>
                         </thead>
-                        <tbody class="text-center">
+                        <tbody class="text-center" *ngIf="paymentsArray.length == 0">
                             <tr>
-                                <th class="bg-secondary text-white align-middle">August 15, 2022</th>
-                                <td><h5>$500</h5></td>
+                                <th colspan="2">No Payments History Available.</th>
                             </tr>
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">July 15, 2022</th>
-                                <td><h5>$500</h5></td>
-                            </tr>
-                            <tr>
-                                <th class="bg-secondary text-white align-middle">June 15, 2022</th>
-                                <td><h5>$500</h5></td>
+                        </tbody>   
+                        <tbody class="text-center" *ngIf="paymentsArray.length > 0">
+                            <tr *ngFor="let item of paymentsArray">
+                                <th class="bg-secondary text-white align-middle"> {{ item.timestamp.toDate() | date: "MMMM dd, yyyy, hh:mm a" }}</th>
+                                <td><b>{{ item.amount }}</b></td>
                             </tr>
                         </tbody>
                     </table>
