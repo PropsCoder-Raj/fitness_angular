@@ -4,16 +4,16 @@
             <div class="gym-class-box d-flex flex-column align-items-center justify-content-center bg-primary text-right text-white py-5 px-5" style="background: #be198d !important">
                 <i class="far fa-clock"></i>
                 <h3 class="display-4 mb-3 text-white font-weight-bold">My Next Session</h3>
-                <h3 class="text-white mt-4">Thurday</h3>
-                <p>August 31 at 6 AM</p>
+                <h3 class="text-white mt-4">{{ nextSession | date: "EEEE" }}</h3>
+                <p>{{ nextSession | date: "MMMM dd" }} at 6 AM</p>
             </div>
         </div>
         <div class="col-md-6 p-0">
             <div class="gym-class-box d-flex flex-column align-items-center justify-content-center bg-secondary text-left text-white py-5 px-5">
                 <i class="fa fa-dollar-sign"></i>
                 <h3 class="display-4 mb-3 text-white font-weight-bold">My Next Payment</h3>
-                <h3 class="text-white mt-4">$456</h3>
-                <p>Due on August 31</p>
+                <h3 class="text-white mt-4">${{nextPayment}}</h3>
+                <p>Due on {{ nextPaymentDate | date: "MMMM dd" }}</p>
             </div>
         </div>
     </div>

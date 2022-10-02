@@ -13,6 +13,7 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent implements OnInit {
   title = 'fitness_angular';
+  status = true;
 
   constructor(public router: Router, public authS: AuthService){ }
 
@@ -20,5 +21,10 @@ export class AppComponent implements OnInit {
     const app = initializeApp(environment.firebaseConfig);
     const analytics = getAnalytics(app);
     const db = getFirestore(app);
+
+    setTimeout(() => {
+      console.log("authS.authStatus : ", this.authS.authStatus)
+      this.status = this.authS.authStatus;
+    }, 1000);
   }
 }

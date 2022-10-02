@@ -1,4 +1,4 @@
-<ng-template *ngIf="authS.authStatus === true">
+<div *ngIf="authS.authStatus">
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
             <a href="" class="navbar-brand">
@@ -13,6 +13,7 @@
                     <a routerLinkActive="active" routerLink="/my-session" class="nav-item nav-link">My Session</a>
                     <a routerLinkActive="active" routerLink="/my-payment-history" class="nav-item nav-link">My Payment History</a>
                     <a routerLinkActive="active" routerLink="/profile" class="nav-item nav-link">Profile</a>
+                    <a class="nav-item nav-link" style="cursor: pointer;" (click)="authS.SignOut()">Sign Out</a>
                 </div>
             </div>
         </nav>
@@ -26,6 +27,6 @@
             </div>
         </div>
     </div>
-</ng-template>    
+</div>
 
 <router-outlet></router-outlet>

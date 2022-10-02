@@ -6,7 +6,13 @@
                 <img class="w-100" src="assets/img/carousel-1.jpg" alt="Image" style="height: 100vh !important;">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Best Gym In Town</h2>
-                    <a href="" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Join Us Now <img src="assets/search.png" alt="Google" srcset="" height="30" width="30" style="margin-left: 30px;"></a>
+                    
+                    <button *ngIf="!loader" (click)="login()" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">
+                        Join Us Now <img src="assets/search.png" alt="Google" srcset="" height="30" width="30" style="margin-left: 30px;">
+                    </button>
+                    <button *ngIf="loader" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">
+                        <sa-spinner-round-filled styles='{"color": "red"}'></sa-spinner-round-filled>
+                    </button>
                 </div>
             </div>
         </div>

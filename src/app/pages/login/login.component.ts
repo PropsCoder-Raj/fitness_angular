@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,10 +9,17 @@ import { Title } from '@angular/platform-browser';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public title: Title) { }
+  public loader = false;
+
+  constructor(public title: Title, public authS: AuthService) { }
 
   ngOnInit(): void {
     this.title.setTitle("Fitness | Login")
+  }
+
+  login(){
+    this.loader = true;
+    this.authS.GoogleAuth();
   }
 
 }
