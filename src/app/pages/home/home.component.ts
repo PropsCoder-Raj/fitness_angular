@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
     this.afs.collection("client", ref => ref.where("uid", "==", localStorage.getItem("uid")))
       .valueChanges()
       .subscribe((user: any) => {
-        this.nextPayment = user[0].payment_lump_sums;
+        this.nextPayment = Number(user[0].individual_session_rate) * 4  + Number(user[0].group_session_rate) * 6;
         var workoutDays: any = user[0].workout_days.toString().split("");
         var days = [
           'Sunday',
