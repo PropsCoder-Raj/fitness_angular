@@ -32,11 +32,15 @@ export class MySessionComponent implements OnInit {
           var name: any = "";
           this.afs.collection("session").doc(data.docId).collection("partners").ref.get()
           .then((partners) => {
-            partners.docs.map((docPartner) => {
-              var dataPartner : any = docPartner.data()
-              name = name + "" + dataPartner.name +", ";
-              console.log("name : ", name);
-            })
+            if(partners.size > 0){
+              partners.docs.map((docPartner) => {
+                var dataPartner : any = docPartner.data()
+                name = name + "" + dataPartner.name +", ";
+                console.log("name : ", name);
+              });
+            }else{
+              name = "-"
+            }
           })
           setTimeout(() => {
             this.sessionArray.push({ ...data, name: name });

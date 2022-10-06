@@ -36,6 +36,7 @@ export class AuthService{
       .then((result: any) => {
         var fullName = result.additionalUserInfo?.profile.name;
         var email = result.additionalUserInfo?.profile.email;
+        console.log("result: ", result);
         this.afs.collection("client", ref => ref.where("uid", "==", result.user?.uid)).valueChanges().subscribe((client) =>{
           if(client.length == 0){
             var docId = this.afs.createId();
