@@ -9,6 +9,10 @@ export class DataService {
   public paymentList = [];
   public myNextSession = "";
   public myNextPayment = 0;
+  public fullName = "";
+  public useremail = "";
+  public phoneNumber = 0;
+  public docId = "";
 
   constructor() { }
 }

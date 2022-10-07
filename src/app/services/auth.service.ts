@@ -50,7 +50,8 @@ export class AuthService{
               individual_session_rate: 50,
               payment_lump_sums: 500,
               uid: result.user?.uid,
-              workout_days: 134
+              workout_days: 134,
+              phoneNumber: 0
             }).then((res: any) => {
                 localStorage.setItem("uid", result.user?.uid);
                 window.location.replace("/")
