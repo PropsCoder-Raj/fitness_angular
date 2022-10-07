@@ -6,14 +6,16 @@ import { LoginComponent } from './pages/login/login.component';
 import { MyPaymentHistoryComponent } from './pages/my-payment-history/my-payment-history.component';
 import { MySessionComponent } from './pages/my-session/my-session.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { UndeConstructionComponent } from './pages/unde-construction/unde-construction.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "home", pathMatch: "full" },
-  { path: "home", component: HomeComponent , canActivate: [AuthGuard]},
-  { path: "my-session", component: MySessionComponent, canActivate: [AuthGuard] },
-  { path: "my-payment-history", component: MyPaymentHistoryComponent, canActivate: [AuthGuard] },
-  { path: "profile", component: ProfileComponent, canActivate: [AuthGuard] },
-  { path: "login", component: LoginComponent },
+  { path: "", redirectTo: "under-construction", pathMatch: "full" },
+  { path: "under-construction", component: UndeConstructionComponent }
+  // { path: "home", component: HomeComponent , canActivate: [AuthGuard]},
+  // { path: "my-session", component: MySessionComponent, canActivate: [AuthGuard] },
+  // { path: "my-payment-history", component: MyPaymentHistoryComponent, canActivate: [AuthGuard] },
+  // { path: "profile", component: ProfileComponent, canActivate: [AuthGuard] },
+  // { path: "login", component: LoginComponent },
 ];
 
 @NgModule({

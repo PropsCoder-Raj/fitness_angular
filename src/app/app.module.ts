@@ -18,6 +18,7 @@ import { SpinnersAngularModule } from 'spinners-angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UndeConstructionComponent } from './pages/unde-construction/unde-construction.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MySessionComponent,
     MyPaymentHistoryComponent,
     ProfileComponent,
-    LoginComponent
+    LoginComponent,
+    UndeConstructionComponent
   ],
   imports: [
     FormsModule,
